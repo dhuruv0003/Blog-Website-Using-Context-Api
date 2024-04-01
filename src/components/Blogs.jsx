@@ -27,7 +27,7 @@ export default function Blogs() {
                                 posts.map((post) => (
                                     <div key={post.id} className="my-5 bg-[#faf0ca] rounded-xl p-5">
                                         <div className="bg-[#ffe37c] text-[#001f30]">
-                                            <p className=" font-bold text-center text-1xl">{post.title}</p>
+                                            <p className=" font-bold text-center text-2xl">{post.title}</p>
                                             <p className="text-center ">
                                                 By
                                                 <span className=" italic"> {post.author}</span> on
