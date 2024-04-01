@@ -26,7 +26,7 @@ export default function Blogs() {
                                 //  Agar length 0 nhi hai toh har post ke liye card banado
                                 posts.map((post) => (
                                     <div key={post.id} className="my-5 bg-[#faf0ca] rounded-xl p-5">
-                                        <div className="bg-[#ffe37c] text-[#001f30]">
+                                        <div className="bg-[#ffe37c] p-1 text-[#001f30]">
                                             <p className=" font-bold text-center text-2xl">{post.title}</p>
                                             <p className="text-center ">
                                                 By

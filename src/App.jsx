@@ -16,7 +16,7 @@ function App() {
   return (
     <div className=''>
      <Header></Header>
-     <div className="w-[70%] bg-[#001d3d] mx-auto"> <Blogs></Blogs>
+     <div className="md:w-[60%] w-[80%] bg-[#001d3d] mx-auto"> <Blogs></Blogs>
      <Pagination></Pagination></div>
     
     </div>
