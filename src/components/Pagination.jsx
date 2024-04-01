@@ -5,7 +5,7 @@ export default function Pagination() {
 
     const { page, handlePageChange, totalPages } = useContext(appContext)
     return (
-        <div className="">
+        <div className="p-2 rounded-s-full rounded-r-full bg-[#fffcdd]">
 
             <div className=" flex justify-evenly">
                 {
