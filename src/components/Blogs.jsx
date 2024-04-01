@@ -33,7 +33,7 @@ export default function Blogs() {
                                                 <span className=" italic"> {post.author}</span> on
                                                 <span className="underline font-bold"> {post.category}</span>
                                             </p>
-                                            <p className="text-center">Posted on {post.date} </p>
+                                            <p className="text-center text-[14px]">Posted on {post.date} </p>
                                         </div>
 
                                        
