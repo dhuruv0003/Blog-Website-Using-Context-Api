@@ -11,7 +11,7 @@ export const appContext = createContext();
 
 //  Here children represents the elements present inside the the AppContextProvider element 
 //  In main.jsx, the <App/> represents the children
-function AppContextProvider({ children }) {
+export default function AppContextProvider({ children }) {
     const [loading, setLoading] = useState(false);
     //Initially the posts has an empty array
     const [posts, setPosts] = useState([])
@@ -19,7 +19,7 @@ function AppContextProvider({ children }) {
     const [totalPages, setTotalPages] = useState(null)
 
     // now provide all of these above values to the to the consumer, by first storing it into an object 
-
+// by default setpage 1
     async function fetchData(page=1){
 
         setLoading(true);
@@ -30,21 +30,30 @@ function AppContextProvider({ children }) {
             setPage(data.page);
             setPosts(data.posts);
             setTotalPages(data.totalPages);
+            
         } catch (error) {
             console.log("error");
+            setPage(1);
+            setPosts([]);
+            setTotalPages(null);
         }
+        setLoading(false);
     } 
 
+    function handlePageChange(page){
+        setPage(page);
+        fetchData(page);
+    }    
 
     const value = {
-        loading, setLoading, posts, setPosts, page, setPage, totalPages, setTotalPages
+        loading, setLoading, posts, setPosts, page, setPage, totalPages, setTotalPages,fetchData,handlePageChange
     };
 
     // in main.jsx the children get the value i.e the app component gets all the values of value 
 
-    return <AppContextProvider value={value}>
+    return <appContext.Provider value={value}>
         {children}
-    </AppContextProvider>
+    </appContext.Provider>;
 
 
 } 
