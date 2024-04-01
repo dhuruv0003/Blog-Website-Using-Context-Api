@@ -1,4 +1,6 @@
+import axios from "axios";
 import { createContext, useState } from "react";
+import { apiUrl } from "../apiUrl";
 
 // step1 => Create context  
 
@@ -17,6 +19,18 @@ function AppContextProvider({ children }) {
     const [totalPages, setTotalPages] = useState(null)
 
     // now provide all of these above values to the to the consumer, by first storing it into an object 
+
+    async function fetchData(page=1){
+
+        setLoading(true);
+        let url=`${apiUrl}?page=${page}`
+        try {
+            const result = await axios.get(url)
+        } catch (error) {
+            console.log("error");
+        }
+    } 
+
 
     const value = {
         loading, setLoading, posts, setPosts, page, setPage, totalPages, setTotalPages
