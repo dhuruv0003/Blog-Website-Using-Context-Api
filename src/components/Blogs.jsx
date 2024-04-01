@@ -36,7 +36,7 @@ export default function Blogs() {
                                             <p className="text-center text-[14px]">Posted on {post.date} </p>
                                         </div>
 
-                                       
+
                                         <p className="mt-3 text-justify">{post.content}</p>
                                         <div >
                                             {
