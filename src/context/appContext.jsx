@@ -25,7 +25,11 @@ function AppContextProvider({ children }) {
         setLoading(true);
         let url=`${apiUrl}?page=${page}`
         try {
-            const result = await axios.get(url)
+            const data = await axios.get(url)
+            console.log(data);
+            setPage(data.page);
+            setPosts(data.posts);
+            setTotalPages(data.totalPages);
         } catch (error) {
             console.log("error");
         }
