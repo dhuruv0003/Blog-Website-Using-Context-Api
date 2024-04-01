@@ -10,7 +10,7 @@ export default function Blogs() {
 
 
     return (
-        <div className="flex flex-col mb-5">
+        <div className="flex flex-col my-[5rem] mb-5">
             {
                 loading ?
                     (<div className="w-full flex h-screen justify-center items-center text-2xl text-white ">Loading <Spinner /></div>
