@@ -13,7 +13,7 @@ export default function Blogs() {
         <div className="flex flex-col mb-5">
             {
                 loading ?
-                    (<div className="w-full flex h-screen justify-center items-center "><Spinner /></div>
+                    (<div className="w-full flex h-screen justify-center items-center text-2xl text-white ">Loading <Spinner /></div>
                     ) :
                     (
                         posts.length === 0 ?
