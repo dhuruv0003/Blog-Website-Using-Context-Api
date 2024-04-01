@@ -41,7 +41,7 @@ export default function Blogs() {
                                         <div >
                                             {
                                                 post.tags.map((tag, index) => {
-                                                    return <span key={index}>{`  #${tag}`}</span>
+                                                    return <span className=" cursor-pointer text-[#2072ff]" key={index}>{`  #${tag}`}</span>
                                                 })
                                             }
                                         </div>
