@@ -14,10 +14,11 @@ function App() {
   },[]);
 
   return (
-    <div className='w-[70%] bg-[#001d3d] mx-auto'>
+    <div className=''>
      <Header></Header>
-     <Blogs></Blogs>
-     <Pagination></Pagination>
+     <div className="w-[70%] bg-[#001d3d] mx-auto"> <Blogs></Blogs>
+     <Pagination></Pagination></div>
+    
     </div>
   )
 }
