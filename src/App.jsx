@@ -14,7 +14,7 @@ function App() {
   },[]);
 
   return (
-    <div>
+    <div className='w-[70%] mx-auto'>
      <Header></Header>
      <Blogs></Blogs>
      <Pagination></Pagination>

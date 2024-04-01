@@ -3,7 +3,7 @@ import { appContext } from "../context/appContext"
 
 export default function Pagination() {
 
-    const { page , handlePageChange,totalPages} = useContext(appContext)
+    const { page, handlePageChange, totalPages } = useContext(appContext)
     return (
         <div className="">
 
@@ -11,19 +11,21 @@ export default function Pagination() {
                 {
                     //Previous buttoon tabhi ayega jab page>1 hoga
                     page > 1 &&
-                    <button className="border p-1 rounded-lg border-black" onClick={()=>handlePageChange(page-1)}>
+                    <button className="border p-1 rounded-lg border-black" onClick={() => handlePageChange(page - 1)}>
                         Previous
                     </button>
                 }
 
+                <p>
+                    page {page} of {totalPages}
+                </p>
+
                 {
                     page < totalPages &&
-                    <button className="border p-1 rounded-lg border-black"  onClick={()=>handlePageChange(page+1)}>Next</button>
+                    <button className="border p-1 rounded-lg border-black" onClick={() => handlePageChange(page + 1)}>Next</button>
                 }
 
-                <p>
-                    page {page} of {totalPages} 
-                </p>
+
             </div>
 
         </div>
