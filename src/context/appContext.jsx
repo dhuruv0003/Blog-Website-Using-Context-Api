@@ -25,8 +25,8 @@ export default function AppContextProvider({ children }) {
         setLoading(true);
         let url=`${apiUrl}?page=${page}`
         try {
-            const data = await axios.get(url)
-            console.log(data);
+            const result =await fetch(url);
+            const data=await result.json();
             setPage(data.page);
             setPosts(data.posts);
             setTotalPages(data.totalPages);
