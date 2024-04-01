@@ -20,6 +20,10 @@ export default function Pagination() {
                     page < totalPages &&
                     <button className="border p-1 rounded-lg border-black"  onClick={()=>handlePageChange(page+1)}>Next</button>
                 }
+
+                <p>
+                    page {page} of {totalPages} 
+                </p>
             </div>
 
         </div>
