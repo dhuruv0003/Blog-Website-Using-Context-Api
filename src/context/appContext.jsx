@@ -2,18 +2,31 @@ import { createContext, useState } from "react";
 
 // step1 => Create context  
 
-    //  If we want to use appContext in any other page we need to ezport it
-    export const appContext=createContext();
+//  If we want to use appContext in any other page we need to ezport it
+export const appContext = createContext();
 
 //  step 2 => create context provider
 
-    //  Here children represents the elements present inside the the AppContextProvider element 
-    //  In main.jsx, the <App/> represents the children
-    function AppContextProvider({children})
-    {
-        const [loading,setloading]=useState(false);
-        //Initially the posts has an empty array
-        const [posts,setposts]=useState([])
-        const [page,setpage]=useState(1);
-        const[totalpages,setTotalPages]=useState(null )
-    } 
+//  Here children represents the elements present inside the the AppContextProvider element 
+//  In main.jsx, the <App/> represents the children
+function AppContextProvider({ children }) {
+    const [loading, setLoading] = useState(false);
+    //Initially the posts has an empty array
+    const [posts, setPosts] = useState([])
+    const [page, setPage] = useState(1);
+    const [totalPages, setTotalPages] = useState(null)
+
+    // now provide all of these above values to the to the consumer, by first storing it into an object 
+
+    const value = {
+        loading, setLoading, posts, setPosts, page, setPage, totalPages, setTotalPages
+    };
+
+    // in main.jsx the children get the value i.e the app component gets all the values of value 
+
+    return <AppContextProvider value={value}>
+        {children}
+    </AppContextProvider>
+
+
+} 
