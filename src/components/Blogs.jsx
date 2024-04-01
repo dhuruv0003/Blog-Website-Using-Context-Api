@@ -10,7 +10,7 @@ export default function Blogs() {
 
 
     return (
-        <div className="">
+        <div className="flex flex-col mb-5">
             {
                 loading ?
                     (<Spinner />) :
@@ -24,15 +24,18 @@ export default function Blogs() {
                             (
                                 //  Agar length 0 nhi hai toh har post ke liye card banado
                                 posts.map((post) => (
-                                    <div key={post.id} className="">
-                                        <p className=" font-bold">{post.title}</p>
-                                        <p>
-                                            By 
-                                            <span> {post.author}</span> on
-                                            <span> {post.category}</span>
-                                        </p>
+                                    <div key={post.id} className="mb-5 bg-[#faf0ca] rounded-xl p-5">
+                                        <div className="bg-[#f4d35e] text-[#003049]">
+                                            <p className=" font-bold text-center text-2xl">{post.title}</p>
+                                            <p className="text-center ">
+                                                By
+                                                <span> {post.author}</span> on
+                                                <span> {post.category}</span>
+                                            </p>
+                                            <p className="text-center">Posted on {post.date} </p>
+                                        </div>
 
-                                        <p>Posted on {post.date} </p>
+                                       
                                         <p>{post.content}</p>
                                         <div >
                                             {

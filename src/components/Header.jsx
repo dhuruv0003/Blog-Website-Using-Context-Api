@@ -1,8 +1,8 @@
 export default function Header(){
     return(
-        <div className="">
+        <div className="mb-5 text-[white]">
             <header>
-                <h1 className="text-center font-bold text-3xl">Blog Website</h1>
+                <h1 className="text-center font-bold text-4xl">Blog Website</h1>
             </header>
         </div>
     )

@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  background-color: #001d3d;
+}
+
+#root{
+  background-color: #001d3d;
+}
+
+
 .spinner {
     width: 48px;
     height: 48px;
